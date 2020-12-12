@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="Implementing dynamic Dark Mode on Flutter using `ThemeMode` and the plugin `provider`.">
+
+        <meta property="og:title" content="Dark Mode on Flutter with ThemeMode and Provider | luizeof"/>
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://luizeof.dev/blog/dark-mode-on-flutter-thememode-and-provider"/>
+        <meta property="og:description" content="Implementing dynamic Dark Mode on Flutter using `ThemeMode` and the plugin `provider`." />
+        <meta name="robots" content="noindex">
+
+        <title>Dark Mode on Flutter with ThemeMode and Provider | luizeof</title>
+
+        <link rel="home" href="https://luizeof.dev">
+        <link rel="icon" href="/favicon.ico">
+        <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title="luizeof Atom Feed">
+
+                    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
+            <script>
+            var firebaseConfig = {
+                apiKey: "AIzaSyBTgkdDoOGInOkqd8i2jPtv30OPdrAWouo",
+                authDomain: "luizeof-dev.firebaseapp.com",
+                projectId: "www-luizeof-dev",
+                storageBucket: "www-luizeof-dev.appspot.com",
+                messagingSenderId: "938125096652",
+                appId: "1:938125096652:web:e10e99f84cf1469d007469",
+                measurementId: "G-5QE06K3X9T"
+            };
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+            </script>
+        
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=e74ed4cca392d7d4901c">
+    </head>
+
+    <body class="flex flex-col justify-between min-h-screen font-sans leading-normal text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-gray-400">
+        <header class="flex items-center h-24 py-4 bg-white border-b shadow dark:bg-gray-900 dark:border-gray-700" role="banner">
+            <div class="container flex items-center max-w-4xl px-6 mx-auto ">
+                <div class="flex items-center">
+                    <a href="/" title="luizeof home" class="inline-flex items-center">
+                        <img class="h-8 mr-3 md:h-10" src="/assets/img/logo.svg" alt="luizeof logo" />
+
+                        <h1 class="my-0 text-lg font-semibold text-blue-800 md:text-2xl hover:text-blue-600">luizeof</h1>
+                    </a>
+                </div>
+
+                <div id="vue-search" class="flex items-center justify-end flex-1">
+
+                    <search></search>
+
+                    <nav class="items-center justify-end hidden text-lg lg:flex">
+    <a title="luizeof Blog" href="/blog"
+        class="ml-6 text-gray-700 hover:text-blue-600 ">
+        Blog
+    </a>
+
+    <a title="luizeof About" href="/about"
+        class="ml-6 text-gray-700 hover:text-blue-600 ">
+        About
+    </a>
+
+    <a title="luizeof Contact" href="/contact"
+        class="ml-6 text-gray-700 hover:text-blue-600 ">
+        Contact
+    </a>
+</nav>
+
+                    <button class="flex items-center justify-center h-10 px-5 bg-blue-500 border border-blue-500 rounded-full lg:hidden focus:outline-none"
+    onclick="navMenu.toggle()"
+>
+    <svg id="js-nav-menu-show" xmlns="http://www.w3.org/2000/svg"
+        class="w-4 text-white fill-current h-9" viewBox="0 0 32 32"
+    >
+        <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+    </svg>
+
+    <svg id="js-nav-menu-hide" xmlns="http://www.w3.org/2000/svg"
+        class="hidden w-4 text-white fill-current h-9" viewBox="0 0 36 30"
+    >
+        <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
+    </svg>
+</button>
+
+                </div>
+            </div>
+        </header>
+
+        <nav id="js-nav-menu" class="hidden nav-menu lg:hidden">
+    <ul class="my-0">
+        <li class="pl-4">
+            <a
+                title="luizeof Blog"
+                href="/blog"
+                class="nav-menu__item hover:text-blue-500 "
+            >Blog</a>
+        </li>
+        <li class="pl-4">
+            <a
+                title="luizeof About"
+                href="/about"
+                class="nav-menu__item hover:text-blue-500 "
+            >About</a>
+        </li>
+        <li class="pl-4">
+            <a
+                title="luizeof Contact"
+                href="/contact"
+                class="nav-menu__item hover:text-blue-500 "
+            >Contact</a>
+        </li>
+    </ul>
+</nav>
+
+        <main role="main" class="container flex-auto w-full max-w-4xl px-6 py-16 mx-auto">
+                        <img src="/assets/img/category/flutter-full.webp" alt="Dark Mode on Flutter with ThemeMode and Provider cover image" class="mb-2">
+    
+    <h1 class="mb-2 leading-none text-gray-900 dark:text-gray-400">Dark Mode on Flutter with ThemeMode and Provider</h1>
+
+    <p class="text-xl text-gray-700 dark:text-blue-200 md:mt-0">luizeof  •  January 15, 2020</p>
+
+                        <a
+                href="/blog/categories/flutter"
+                title="View posts in flutter"
+                class="inline-block px-3 pt-px mr-4 text-xs font-semibold leading-loose tracking-wide text-gray-800 uppercase bg-gray-300 rounded hover:bg-blue-200"
+            >flutter</a>
+            
+    <div class="pb-4 mb-10 border-b border-blue-200" v-pre>
+        <p>In this article I will present a method of implementing dynamic Dark Mode on Flutter using <code>ThemeMode</code> and the plugin <code>provider</code>.</p>
+
+<p>There are many ways to apply the dynamic theme to <a href="/blog/categories/flutter/">Flutter</a>, but the plugin provider is one of the best and most efficient ways I am using in FluCast.</p>
+
+<p>The plugin provider is a mix between Dependency Injection (DI) and state management, built with widgets for widgets.</p>
+
+<p>It purposely uses widgets for DI / state management instead of Dart classes like Stream. The reason is that widgets are very simple but robust and scalable and for those who use Flutter is more natural.</p>
+
+<p>By using state management widgets, the provider can ensure:</p>
+
+<ul>
+<li>Maintenance, through a unidirectional data flow;</li>
+<li>Testability / composition, as it is always possible to mock / override a value;</li>
+<li>Robustness as it is harder to forget to deal with the upgrade scenario of a model or widget.</li>
+</ul>
+
+<p>To read more about the provider, see the <a href="https://pub.dev/packages/provider">documentation</a>.</p>
+
+<h2>Dark Mode Example</h2>
+
+<p>In this example we will use Flutter's native <code>ThemeMode</code> to control the Dark Mode and <strong><em>Light Mode</em></strong> of the app you have in some apps, such as reading apps where <strong><em>Light Mode</em></strong> is for the day and <strong><em>Dark Mode</em></strong> is for the night.</p>
+
+<p>You may also have noticed that Google Maps has the same feature for night and day modes, which turn on and off automatically according to the light. It is an increasingly common resource today.</p>
+
+<p>Add the provider plugin to the pubspec.yaml file:</p>
+
+<pre><code class="language-yaml">dependencies:  
+ Flutter:  
+   sdk: Flutter  
+ provider: ^4.0.1
+</code></pre>
+
+<p>Now let's create a new file for implementation of ThemeProvider. I created a file called theme.dart where will be the DynamicDarkMode class:</p>
+
+<pre><code class="language-dart">import 'package:flutter/foundation.dart';
+
+/// Provider para o Dark Mode
+class DynamicDarkMode with ChangeNotifier {
+  /// Por padrão o App Começa com o modo Light Mode
+  /// Você pode configurar um método de persistir o valor de
+  /// [_isDarkMode] para que ele seja preservado quando o app for fechado
+  bool _isDarkMode = false;
+
+  /// Verifica se o App está em Dark Mode
+  get isDarkMode =&gt; this._isDarkMode;
+
+  /// Aplica o Dark Mode
+  void setDarkMode() {
+    this._isDarkMode = true;
+    notifyListeners();
+  }
+
+  /// Aplica o Light Mode
+  void setLightMode() {
+    this._isDarkMode = false;
+    notifyListeners();
+  }
+}
+</code></pre>
+
+<p>Now open the main.dart file and deploy ChangeNotifier to the entire application so we can change the theme from anywhere in the application.</p>
+
+<p>Basically you need to change the main () method to look like this:</p>
+
+<pre><code class="language-dart">void main() async =&gt; runApp(
+      // Aqui rodamos o app dentro do provider
+      ChangeNotifierProvider&lt;DynamicDarkMode&gt;(
+        create: (_) =&gt; DynamicDarkMode(),
+        child: MyHomePage(),
+      ),
+    );
+</code></pre>
+
+<p>I implemented an option to switch between dark and light mode of the theme. Following is the implementation of programming.</p>
+
+<h2>Reading Provider Data</h2>
+
+<p>The plugin provider offers the Provider.of (context) method that allows us to read our MaterialApp data and can be accessed anywhere:</p>
+
+<pre><code class="language-dart">// Aqui capturamos os dados do nosso ThemeProvider
+final themeProvider = Provider.of&lt;DynamicDarkMode&gt;(context);
+</code></pre>
+
+<h2>Dark Mode Final Code</h2>
+
+<p>See what the app will look like with the modified main () method and build () reading the provider data.</p>
+
+<p>The sample app is available on github.</p>
+
+<pre><code class="language-dart">import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'theme.dart';
+
+void main() async =&gt; runApp(
+      // Aqui rodamos o app dentro do provider
+      ChangeNotifierProvider&lt;DynamicDarkMode&gt;(
+        create: (_) =&gt; DynamicDarkMode(),
+        child: MyHomePage(),
+      ),
+    );
+
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() =&gt; _MyHomePageState();
+}
+
+class _MyHomePageState extends State&lt;MyHomePage&gt; {
+  @override
+  Widget build(BuildContext context) {
+    // Aqui capturamos os dados do nosso ThemeProvider
+    final themeProvider = Provider.of&lt;DynamicDarkMode&gt;(context);
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      // Habilita o suporte ao Dark Mode no MaterialApp
+      darkTheme: ThemeData.dark(),
+      // Informa o status do Dark Mode ap MaterialApp
+      themeMode: themeProvider.isDarkMode ? ThemeMode.dark : ThemeMode.light,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(
+            themeProvider.isDarkMode
+                ? 'Dark Mode Habilitado'
+                : 'Light Mode Habilitado',
+          ),
+          actions: &lt;Widget&gt;[
+            // action button
+            IconButton(
+              icon: Icon(Icons.brightness_4),
+              onPressed: () {
+                // Aqui alteramos o status do Dark Mode
+                // e o Provider se encarrega de avisar ao MaterialApp
+                setState(
+                  () {
+                    themeProvider.isDarkMode
+                        // Configura como Light Mode
+                        ? themeProvider.setLightMode()
+                        // Configura como Dark Mode
+                        : themeProvider.setDarkMode();
+                  },
+                );
+              },
+            ),
+          ],
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: &lt;Widget&gt;[
+              Spacer(),
+              Text('Texto Padrão'),
+              Spacer(),
+              Icon(
+                Icons.wb_sunny,
+                size: 36.0,
+              ),
+              Spacer(),
+              RaisedButton(
+                child: Text('RaisedButton Padrão'),
+                onPressed: () {},
+              ),
+              Spacer(),
+              Text('Dark Mode Dinâmico'),
+              Spacer(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+</code></pre>
+
+<p>Run the project on the device and test the application with the code that is in Github. You can customize the theme as per your requirement.</p>
+
+<p><img src="/assets/img/flutter-light-mode.webp" alt="How to do Dark Mode on Flutter with ThemeMode and Provider" /></p>
+
+<p><img src="/assets/img/flutter-dark-mode.webp" alt="How to do Dark Mode on Flutter with ThemeMode and Provider" /></p>
+
+<h2>Conclusion</h2>
+
+<p>In this article, we learned how to implement the dynamic theme in Flutter using the provider.</p>
+
+<p>This example is basic and easy to understand and you can make it fully customized by implementing other theme properties in the provider file. You can also store theme settings in shared preferences to keep the settings active after closing and reopening the app.</p>
+    </div>
+
+    <nav class="flex justify-between text-sm md:text-base">
+        <div>
+                            <a href="https://luizeof.dev/blog/how-to-access-api-with-basic-authentication-in-flutter" title="Older Post: How to access API with Basic Authentication in Flutter">
+                    &LeftArrow; How to access API with Basic Authentication in Flutter
+                </a>
+                    </div>
+
+        <div>
+                    </div>
+    </nav>
+        </main>
+
+        <footer class="py-4 mt-12 text-sm text-center bg-white dark:bg-gray-900" role="contentinfo">
+            <ul class="flex flex-col justify-center list-none md:flex-row">
+                <li class="md:mr-2">
+                    &copy; <a href="https://tighten.co" title="Tighten website">Tighten</a> 2020.
+                </li>
+
+                <li>
+                    Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a>
+                    and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.
+                </li>
+            </ul>
+        </footer>
+
+        <script src="/assets/build/js/main.js?id=c3b583699950f6767f55"></script>
+
+        <script>
+    const navMenu = {
+        toggle() {
+            const menu = document.getElementById('js-nav-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('lg:block');
+            document.getElementById('js-nav-menu-hide').classList.toggle('hidden');
+            document.getElementById('js-nav-menu-show').classList.toggle('hidden');
+        },
+    }
+</script>
+    </body>
+</html>

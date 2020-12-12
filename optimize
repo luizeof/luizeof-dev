@@ -1,0 +1,11 @@
+#!/bin/bash
+
+clear
+
+vendor/bin/jigsaw build production
+
+find source/assets/images/ -name "*.jpg" -exec jpegoptim -m80 -o -p --strip-all {} \;
+
+find source/assets/img/ -name "*.jpg" -exec jpegoptim -m80 -o -p --strip-all {} \;
+
+echo "Done."

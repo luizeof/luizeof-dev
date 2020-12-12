@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="Desenvolvedor Web com Laravel e Mobile com Flutter">
+
+        <meta property="og:title" content="How to convert data in Flutter and Dart | luizeof"/>
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://luizeof.dev/blog/how-to-convert-data-in-flutter-and-dart"/>
+        <meta property="og:description" content="Desenvolvedor Web com Laravel e Mobile com Flutter" />
+        <meta name="robots" content="noindex">
+
+        <title>How to convert data in Flutter and Dart | luizeof</title>
+
+        <link rel="home" href="https://luizeof.dev">
+        <link rel="icon" href="/favicon.ico">
+        <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title="luizeof Atom Feed">
+
+                    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
+            <script>
+            var firebaseConfig = {
+                apiKey: "AIzaSyBTgkdDoOGInOkqd8i2jPtv30OPdrAWouo",
+                authDomain: "luizeof-dev.firebaseapp.com",
+                projectId: "www-luizeof-dev",
+                storageBucket: "www-luizeof-dev.appspot.com",
+                messagingSenderId: "938125096652",
+                appId: "1:938125096652:web:e10e99f84cf1469d007469",
+                measurementId: "G-5QE06K3X9T"
+            };
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+            </script>
+        
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=e74ed4cca392d7d4901c">
+    </head>
+
+    <body class="flex flex-col justify-between min-h-screen font-sans leading-normal text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-gray-400">
+        <header class="flex items-center h-24 py-4 bg-white border-b shadow dark:bg-gray-900 dark:border-gray-700" role="banner">
+            <div class="container flex items-center max-w-4xl px-6 mx-auto ">
+                <div class="flex items-center">
+                    <a href="/" title="luizeof home" class="inline-flex items-center">
+                        <img class="h-8 mr-3 md:h-10" src="/assets/img/logo.svg" alt="luizeof logo" />
+
+                        <h1 class="my-0 text-lg font-semibold text-blue-800 md:text-2xl hover:text-blue-600">luizeof</h1>
+                    </a>
+                </div>
+
+                <div id="vue-search" class="flex items-center justify-end flex-1">
+
+                    <search></search>
+
+                    <nav class="items-center justify-end hidden text-lg lg:flex">
+    <a title="luizeof Blog" href="/blog"
+        class="ml-6 text-gray-700 hover:text-blue-600 ">
+        Blog
+    </a>
+
+    <a title="luizeof About" href="/about"
+        class="ml-6 text-gray-700 hover:text-blue-600 ">
+        About
+    </a>
+
+    <a title="luizeof Contact" href="/contact"
+        class="ml-6 text-gray-700 hover:text-blue-600 ">
+        Contact
+    </a>
+</nav>
+
+                    <button class="flex items-center justify-center h-10 px-5 bg-blue-500 border border-blue-500 rounded-full lg:hidden focus:outline-none"
+    onclick="navMenu.toggle()"
+>
+    <svg id="js-nav-menu-show" xmlns="http://www.w3.org/2000/svg"
+        class="w-4 text-white fill-current h-9" viewBox="0 0 32 32"
+    >
+        <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+    </svg>
+
+    <svg id="js-nav-menu-hide" xmlns="http://www.w3.org/2000/svg"
+        class="hidden w-4 text-white fill-current h-9" viewBox="0 0 36 30"
+    >
+        <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
+    </svg>
+</button>
+
+                </div>
+            </div>
+        </header>
+
+        <nav id="js-nav-menu" class="hidden nav-menu lg:hidden">
+    <ul class="my-0">
+        <li class="pl-4">
+            <a
+                title="luizeof Blog"
+                href="/blog"
+                class="nav-menu__item hover:text-blue-500 "
+            >Blog</a>
+        </li>
+        <li class="pl-4">
+            <a
+                title="luizeof About"
+                href="/about"
+                class="nav-menu__item hover:text-blue-500 "
+            >About</a>
+        </li>
+        <li class="pl-4">
+            <a
+                title="luizeof Contact"
+                href="/contact"
+                class="nav-menu__item hover:text-blue-500 "
+            >Contact</a>
+        </li>
+    </ul>
+</nav>
+
+        <main role="main" class="container flex-auto w-full max-w-4xl px-6 py-16 mx-auto">
+                        <img src="/assets/img/category/flutter-full.webp" alt="How to convert data in Flutter and Dart cover image" class="mb-2">
+    
+    <h1 class="mb-2 leading-none text-gray-900 dark:text-gray-400">How to convert data in Flutter and Dart</h1>
+
+    <p class="text-xl text-gray-700 dark:text-blue-200 md:mt-0">luizeof  •  December 5, 2019</p>
+
+                        <a
+                href="/blog/categories/flutter"
+                title="View posts in flutter"
+                class="inline-block px-3 pt-px mr-4 text-xs font-semibold leading-loose tracking-wide text-gray-800 uppercase bg-gray-300 rounded hover:bg-blue-200"
+            >flutter</a>
+            
+    <div class="pb-4 mb-10 border-b border-blue-200" v-pre>
+        <p>During development it is common to convert data from one type to another to perform the most diverse operations and Dart offers a number of methods to perform the conversions within <a href="/blog/categories/flutter/">Flutter</a>.</p>
+
+<h2>Convert String to Int</h2>
+
+<pre><code class="language-dart">var strtoint = int.parse("999");
+</code></pre>
+
+<p>The <code>int.parse</code> method parses the source as an <code>integer</code> literal and returns the value.</p>
+
+<p>The source must be a non-empty sequence of base base digits, optionally prefixed with a minus or plus sign (‘-‘ or ‘+’). Must not be null.</p>
+
+<p>If the source <code>String</code> does not contain a valid <code>integer</code> literal, optionally prefixed by a sign, a <code>FormatException</code> is thrown.</p>
+
+<h2>Convert String to double</h2>
+
+<pre><code class="language-dart">var strtodouble = double.parse('1.1');
+</code></pre>
+
+<p>The <code>double.parse()</code> method accepts an optional sign (+ or -) followed by the characters "<code>Infinity</code>", "<code>NaN</code>" or a floating point representation.</p>
+
+<p>A floating point representation is composed of a mantissa and an optional part of the exponent.</p>
+
+<p>The mantissa is a decimal point (.) Followed by a sequence of digits (decimals) or a sequence of digits optionally followed by a decimal point and optionally more digits.</p>
+
+<p>The exponent (optional) part consists of the character “e” or “E“, an optional sign and one or more digits. <code>String</code> must not be <code>null</code>. Leading and trailing whitespaces are ignored.</p>
+
+<p>If the source <code>String</code> is not a valid double literal, then <code>onError</code> is called with the source as an argument and its return value will be used. If no <code>onError</code> is provided, a <code>FormatException</code> is thrown.</p>
+
+<h2>Convert int to String</h2>
+
+<p>Dart offers a special method called <code>toString()</code> to convert <code>integer</code> to <code>String</code>.</p>
+
+<pre><code class="language-dart">String inttostr = 1.toString ();
+</code></pre>
+
+<p>i<code>nt.toString()</code> returns the representation of an <code>integer</code> numeric literal.</p>
+
+<h2>Convert double to String</h2>
+
+<p>Dart offers a special method called <code>toString()</code> to convert <code>double</code> numbers to <code>String</code>.</p>
+
+<pre><code class="language-dart">String doubletostr = 1.9.toString();
+</code></pre>
+
+<p><code>double.toString()</code> returns the representation of a numeric literal, so that the <code>double</code> value closest to the mathematical value of the representation is this <code>double</code>.</p>
+    </div>
+
+    <nav class="flex justify-between text-sm md:text-base">
+        <div>
+                    </div>
+
+        <div>
+                            <a href="https://luizeof.dev/blog/widgets-flui-flflatbutton-flraisedbutton-e-flgradientbutton" title="Newer Post: Widgets FLUI FLFlatButton, FLRaisedButton e FLGradientButton">
+                    Widgets FLUI FLFlatButton, FLRaisedButton e FLGradientButton &RightArrow;
+                </a>
+                    </div>
+    </nav>
+        </main>
+
+        <footer class="py-4 mt-12 text-sm text-center bg-white dark:bg-gray-900" role="contentinfo">
+            <ul class="flex flex-col justify-center list-none md:flex-row">
+                <li class="md:mr-2">
+                    &copy; <a href="https://tighten.co" title="Tighten website">Tighten</a> 2020.
+                </li>
+
+                <li>
+                    Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a>
+                    and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.
+                </li>
+            </ul>
+        </footer>
+
+        <script src="/assets/build/js/main.js?id=c3b583699950f6767f55"></script>
+
+        <script>
+    const navMenu = {
+        toggle() {
+            const menu = document.getElementById('js-nav-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('lg:block');
+            document.getElementById('js-nav-menu-hide').classList.toggle('hidden');
+            document.getElementById('js-nav-menu-show').classList.toggle('hidden');
+        },
+    }
+</script>
+    </body>
+</html>
