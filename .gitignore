@@ -1,4 +1,4 @@
-/build_local/
+/build_local
 /node_modules/
 /vendor/
 .DS_Store
