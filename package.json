@@ -16,8 +16,12 @@
         "laravel-mix-jigsaw": "^1.0.0",
         "sass": "^1.15.2",
         "sass-loader": "^7.1.0",
-        "tailwindcss": "^1.0.4",
         "vue": "^2.5.21",
         "vue-template-compiler": "^2.5.21"
+    },
+    "dependencies": {
+        "autoprefixer": "^9.8.6",
+        "postcss": "^7.0.35",
+        "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2"
     }
 }
