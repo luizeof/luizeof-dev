@@ -5,7 +5,7 @@ use Illuminate\Support\Str;
 return [
     'baseUrl' => '',
     'production' => false,
-    'siteName' => 'luizeof',
+    'siteName' => 'luizeof | Laravel | Flutter',
     'siteDescription' => 'Desenvolvedor Web com Laravel e Mobile com Flutter',
     'siteAuthor' => 'luizeof',
 
