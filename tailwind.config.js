@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   purge: {
     content: [
@@ -15,12 +17,11 @@ module.exports = {
       ],
     },
   },
+  darkMode: 'media',
   theme: {
     extend: {
       fontFamily: {
-        sans: [
-          'Nunito Sans'
-        ],
+        sans: ['Inter var'],
         mono: [
           'monospace',
         ],
@@ -56,9 +57,18 @@ module.exports = {
     },
   },
   variants: {
-    borderRadius: ['responsive', 'focus'],
-    borderWidth: ['responsive', 'active', 'focus'],
-    width: ['responsive', 'focus']
+    borderRadius: ['responsive', 'focus', 'dark'],
+    borderWidth: ['responsive', 'active', 'focus', 'dark'],
+    width: ['responsive', 'focus', 'dark'],
+    backgroundColor: ['group-focus', 'active', 'dark'],
+    borderColor: ['group-focus', 'dark'],
+    boxShadow: ['group-focus', 'dark'],
+    opacity: ['group-focus', 'dark'],
+    textColor: ['group-focus', 'active', 'dark'],
+    textDecoration: ['group-focus', 'dark'],
+    extend: {
+      textOpacity: ['dark']
+    }
   },
   plugins: [
     function({ addUtilities }) {
@@ -71,6 +81,7 @@ module.exports = {
         },
       }
       addUtilities(newUtilities)
-    }
+    },
+    require('@tailwindcss/typography')
   ]
 }

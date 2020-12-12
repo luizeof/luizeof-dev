@@ -1,4 +1,4 @@
-<nav id="js-nav-menu" class="nav-menu hidden lg:hidden">
+<nav id="js-nav-menu" class="hidden nav-menu lg:hidden">
     <ul class="my-0">
         <li class="pl-4">
             <a

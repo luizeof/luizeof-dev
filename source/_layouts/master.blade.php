@@ -18,25 +18,41 @@
         <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title="{{ $page->siteName }} Atom Feed">
 
         @if ($page->production)
-            <!-- Insert analytics code here -->
+            <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
+            <script>
+            var firebaseConfig = {
+                apiKey: "AIzaSyBTgkdDoOGInOkqd8i2jPtv30OPdrAWouo",
+                authDomain: "luizeof-dev.firebaseapp.com",
+                projectId: "www-luizeof-dev",
+                storageBucket: "www-luizeof-dev.appspot.com",
+                messagingSenderId: "938125096652",
+                appId: "1:938125096652:web:e10e99f84cf1469d007469",
+                measurementId: "G-5QE06K3X9T"
+            };
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+            </script>
         @endif
 
-        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
     </head>
 
-    <body class="flex flex-col justify-between min-h-screen bg-gray-100 text-gray-800 leading-normal font-sans">
-        <header class="flex items-center shadow bg-white border-b h-24 py-4" role="banner">
-            <div class="container flex items-center max-w-8xl mx-auto px-4 lg:px-8">
+    <body class="flex flex-col justify-between min-h-screen font-sans leading-normal text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-gray-400">
+        <header class="flex items-center h-24 py-4 bg-white border-b shadow dark:bg-gray-900 dark:border-gray-700" role="banner">
+            <div class="container flex items-center max-w-4xl px-6 mx-auto ">
                 <div class="flex items-center">
                     <a href="/" title="{{ $page->siteName }} home" class="inline-flex items-center">
-                        <img class="h-8 md:h-10 mr-3" src="/assets/img/logo.svg" alt="{{ $page->siteName }} logo" />
+                        <img class="h-8 mr-3 md:h-10" src="/assets/img/logo.svg" alt="{{ $page->siteName }} logo" />
 
-                        <h1 class="text-lg md:text-2xl text-blue-800 font-semibold hover:text-blue-600 my-0">{{ $page->siteName }}</h1>
+                        <h1 class="my-0 text-lg font-semibold text-blue-800 md:text-2xl hover:text-blue-600">{{ $page->siteName }}</h1>
                     </a>
                 </div>
 
-                <div id="vue-search" class="flex flex-1 justify-end items-center">
+                <div id="vue-search" class="flex items-center justify-end flex-1">
+
                     <search></search>
 
                     @include('_nav.menu')
@@ -48,12 +64,12 @@
 
         @include('_nav.menu-responsive')
 
-        <main role="main" class="flex-auto w-full container max-w-4xl mx-auto py-16 px-6">
+        <main role="main" class="container flex-auto w-full max-w-4xl px-6 py-16 mx-auto">
             @yield('body')
         </main>
 
-        <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
-            <ul class="flex flex-col md:flex-row justify-center list-none">
+        <footer class="py-4 mt-12 text-sm text-center bg-white dark:bg-gray-900" role="contentinfo">
+            <ul class="flex flex-col justify-center list-none md:flex-row">
                 <li class="md:mr-2">
                     &copy; <a href="https://tighten.co" title="Tighten website">Tighten</a> {{ date('Y') }}.
                 </li>

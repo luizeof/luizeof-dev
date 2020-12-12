@@ -7,29 +7,27 @@
                 <img src="{{ $featuredPost->cover_image }}" alt="{{ $featuredPost->title }} cover image" class="mb-6">
             @endif
 
-            <p class="text-gray-700 font-medium my-2">
+            <p class="my-2 font-medium text-gray-700 dark:text-gray-400">
                 {{ $featuredPost->getDate()->format('F j, Y') }}
             </p>
 
-            <h2 class="text-3xl mt-0">
-                <a href="{{ $featuredPost->getUrl() }}" title="Read {{ $featuredPost->title }}" class="text-gray-900 font-extrabold">
+            <h2 class="mt-0 text-3xl">
+                <a href="{{ $featuredPost->getUrl() }}" title="Read {{ $featuredPost->title }}" class="font-extrabold text-gray-900 dark:underline dark:text-blue-400">
                     {{ $featuredPost->title }}
                 </a>
             </h2>
 
             <p class="mt-0 mb-4">{!! $featuredPost->getExcerpt() !!}</p>
 
-            <a href="{{ $featuredPost->getUrl() }}" title="Read - {{ $featuredPost->title }}" class="uppercase tracking-wide mb-4">
+            <a href="{{ $featuredPost->getUrl() }}" title="Read - {{ $featuredPost->title }}" class="mb-4 tracking-wide uppercase">
                 Read
             </a>
         </div>
 
         @if (! $loop->last)
-            <hr class="border-b my-6">
+            <hr class="my-6 border-b">
         @endif
     @endforeach
-
-    @include('_components.newsletter-signup')
 
     @foreach ($posts->where('featured', false)->take(6)->chunk(2) as $row)
         <div class="flex flex-col md:flex-row md:-mx-6">
@@ -39,13 +37,13 @@
                 </div>
 
                 @if (! $loop->last)
-                    <hr class="block md:hidden w-full border-b mt-2 mb-6">
+                    <hr class="block w-full mt-2 mb-6 border-b md:hidden">
                 @endif
             @endforeach
         </div>
 
         @if (! $loop->last)
-            <hr class="w-full border-b mt-2 mb-6">
+            <hr class="w-full mt-2 mb-6 border-b">
         @endif
     @endforeach
 @stop
