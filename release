@@ -6,4 +6,4 @@ npm run production
 
 ./vendor/bin/jigsaw build production
 
-cp -rf ./source/public/** ./build_production/
+cp -rf source/public/** build_production/
