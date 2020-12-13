@@ -2,6 +2,12 @@
 
 rm -rf build_production
 
+echo "Building Blog ..."
+
+cd _blog
+
+rm -rf build_production
+
 npm run production
 
 vendor/bin/jigsaw build production
@@ -9,5 +15,11 @@ vendor/bin/jigsaw build production
 find source/assets/images/ -name "*.jpg" -exec jpegoptim -m80 -o -p --strip-all {} \;
 
 find source/assets/img/ -name "*.jpg" -exec jpegoptim -m80 -o -p --strip-all {} \;
+
+cd ..
+
+mkdir -p build_production
+
+mv _blog/build_production ./build_production/blog
 
 firebase deploy

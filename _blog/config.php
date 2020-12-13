@@ -6,7 +6,7 @@ return [
     'baseUrl' => '',
     'production' => false,
     'siteName' => 'luizeof | Laravel | Flutter',
-    'siteDescription' => 'Desenvolvedor Web com Laravel e Mobile com Flutter',
+    'siteDescription' => 'Web Developer Laravel / Flutter',
     'siteAuthor' => 'luizeof',
 
     // collections
@@ -14,10 +14,10 @@ return [
         'posts' => [
             'author' => 'luizeof', // Default author, if not provided in a post
             'sort' => '-date',
-            'path' => 'blog/{filename}',
+            'path' => '/{filename}',
         ],
         'categories' => [
-            'path' => '/blog/categories/{filename}',
+            'path' => '/categories/{filename}',
             'posts' => function ($page, $allPosts) {
                 return $allPosts->filter(function ($post) use ($page) {
                     return $post->categories ? in_array($page->getFilename(), $post->categories, true) : false;

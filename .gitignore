@@ -1,7 +1,9 @@
 /build_local/
 /build_production/
-/node_modules/
-/vendor/
+/_blog/build_local/
+/_blog/build_production/
+/_blog/node_modules/
+/_blog/vendor/
 .DS_Store
 .firebase-debug.log
 .firebase/*.cache
