@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm -rf build_local
+
+npm run dev
+
+./vendor/bin/jigsaw build

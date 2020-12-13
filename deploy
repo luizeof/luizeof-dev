@@ -1,7 +1,13 @@
 #!/bin/bash
 
-./release
+rm -rf build_production
 
-./optimize
+npm run production
+
+vendor/bin/jigsaw build production
+
+find source/assets/images/ -name "*.jpg" -exec jpegoptim -m80 -o -p --strip-all {} \;
+
+find source/assets/img/ -name "*.jpg" -exec jpegoptim -m80 -o -p --strip-all {} \;
 
 firebase deploy
