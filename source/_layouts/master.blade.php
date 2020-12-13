@@ -63,9 +63,9 @@
             <div class="container flex items-center max-w-4xl px-6 mx-auto ">
                 <div class="flex items-center">
                     <a href="/" title="{{ $page->siteName }} home" class="inline-flex items-center">
-                        <img class="h-8 mr-3 md:h-10" src="/assets/img/logo.svg" alt="{{ $page->siteName }} logo" />
+                        <img class="h-8 mr-3 md:h-10" src="/assets/img/luizeof.jpg" alt="{{ $page->siteName }} logo" />
 
-                        <h1 class="my-0 text-lg font-semibold text-blue-800 md:text-2xl hover:text-blue-600">{{ $page->siteName }}</h1>
+                        <span class="my-0 text-lg font-semibold text-blue-800 md:text-2xl hover:text-blue-600">luizeof</span>
                     </a>
                 </div>
 
@@ -89,12 +89,7 @@
         <footer class="py-4 mt-12 text-sm text-center bg-white dark:bg-gray-900" role="contentinfo">
             <ul class="flex flex-col justify-center list-none md:flex-row">
                 <li class="md:mr-2">
-                    &copy; <a href="https://tighten.co" title="Tighten website">Tighten</a> {{ date('Y') }}.
-                </li>
-
-                <li>
-                    Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a>
-                    and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.
+                    &copy; <a href="https://luizeof.dev" title="Luiz Eduardo">luizeof.dev</a> {{ date('Y') }}.
                 </li>
             </ul>
         </footer>
