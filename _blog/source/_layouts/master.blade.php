@@ -51,11 +51,12 @@
             firebase.initializeApp(firebaseConfig);
             firebase.analytics();
             </script>
+            <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "25de681d7f73400fbbc8c4f18b08c66e"}'></script><!-- End Cloudflare Web Analytics -->
         @endif
 
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
-        <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
+        <link rel="stylesheet" href="/blog{{ mix('css/main.css', 'assets/build') }}">
     </head>
 
     <body class="flex flex-col justify-between min-h-screen font-sans leading-normal text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-gray-400">
@@ -63,7 +64,7 @@
             <div class="container flex items-center max-w-4xl px-6 mx-auto ">
                 <div class="flex items-center">
                     <a href="/" title="{{ $page->siteName }} home" class="inline-flex items-center">
-                        <img class="h-8 mr-3 md:h-10" src="/assets/img/luizeof.jpg" alt="{{ $page->siteName }} logo" />
+                        <img class="h-8 mr-3 md:h-10" src="/blog/assets/img/luizeof.jpg" alt="{{ $page->siteName }} logo" />
 
                         <span class="my-0 text-lg font-semibold text-blue-800 md:text-2xl hover:text-blue-600">luizeof</span>
                     </a>
@@ -94,7 +95,7 @@
             </ul>
         </footer>
 
-        <script src="{{ mix('js/main.js', 'assets/build') }}"></script>
+        <script src="/blog{{ mix('js/main.js', 'assets/build') }}"></script>
 
         @stack('scripts')
     </body>
