@@ -1,0 +1,7 @@
+{
+    "name": "markdown-json",
+    "cwd": "./",
+    "src": "source/_posts/",
+    "filePattern": "*.md",
+    "dist": "/Users/luizeof/Documents/GitHub/luizeof-dev/_blog/json/index.json"
+    }

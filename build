@@ -1,7 +1,26 @@
 #!/bin/bash
 
-rm -rf build_local
+rm -rf build_production
 
-npm run dev
+echo "Building Blog ..."
 
-./vendor/bin/jigsaw build
+cd _blog
+
+rm -rf build_production
+
+npm run production
+
+vendor/bin/jigsaw build production
+
+find source/assets/images/ -name "*.jpg" -exec jpegoptim -m80 -o -p --strip-all {} \;
+
+find source/assets/img/ -name "*.jpg" -exec jpegoptim -m80 -o -p --strip-all {} \;
+
+markdown-json -c $(pwd)/md-settings.json
+
+cd ..
+
+mkdir -p build_production
+
+mv _blog/build_production ./build_production/blog
+
