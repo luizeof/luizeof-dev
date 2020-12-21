@@ -18,7 +18,7 @@ find source/assets/img/ -name "*.jpg" -exec jpegoptim -m80 -o -p --strip-all {} 
 
 cd ..
 
-mkdir -p build_production
+cp -rp _www build_production
 
 mv _blog/build_production ./build_production/blog
 
