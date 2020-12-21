@@ -16,8 +16,6 @@ find source/assets/images/ -name "*.jpg" -exec jpegoptim -m80 -o -p --strip-all 
 
 find source/assets/img/ -name "*.jpg" -exec jpegoptim -m80 -o -p --strip-all {} \;
 
-markdown-json -c $(pwd)/md-settings.json
-
 cd ..
 
 mkdir -p build_production

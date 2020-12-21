@@ -14,6 +14,7 @@ class GenerateIndex
                 'categories' => $page->categories,
                 'link' => rightTrimPath($jigsaw->getConfig('baseUrl')) . $page->getPath(),
                 'snippet' => $page->getExcerpt(),
+                'content' => $page->getContent(),
             ];
         })->values());
 
