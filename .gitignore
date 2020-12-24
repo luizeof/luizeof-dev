@@ -1,9 +1,9 @@
 /build_local/
 /build_production/
-/_blog/build_local/
-/_blog/build_production/
-/_blog/node_modules/
-/_blog/vendor/
+/_www/build_local/
+/_www/build_production/
+/_www/node_modules/
+/_www/vendor/
 .DS_Store
 .firebase-debug.log
 .firebase/*.cache
