@@ -6,4 +6,5 @@
 /_www/vendor/
 .DS_Store
 .firebase-debug.log
+firebase-debug.log
 .firebase/*.cache
