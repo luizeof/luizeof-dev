@@ -3,3 +3,5 @@
 sh build
 
 firebase deploy
+
+rm -rf build_production
