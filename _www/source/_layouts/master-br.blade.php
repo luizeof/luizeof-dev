@@ -18,7 +18,7 @@
 
         <title>{{ $page->title ?  $page->title . ' | ' : '' }}{{ $page->siteName }}</title>
 
-        <link rel="preload" rel="home" href="{{ $page->baseUrl }}">
+        <link rel="home" href="{{ $page->baseUrl }}">
 
         <link rel="canonical" href="{{ $page->getUrl() }}" />
 
@@ -61,9 +61,9 @@
             <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "25de681d7f73400fbbc8c4f18b08c66e"}'></script><!-- End Cloudflare Web Analytics -->
         @endif
 
-        <link rel="preload" rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
-        <link rel="preload" rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
+        <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
     </head>
 
     <body class="flex flex-col justify-between min-h-screen font-sans leading-normal text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-gray-400">
@@ -97,7 +97,7 @@
             </ul>
         </footer>
 
-        <script rel="preload" src="{{ mix('js/main.js', 'assets/build') }}"></script>
+        <script src="{{ mix('js/main.js', 'assets/build') }}"></script>
 
         @stack('scripts')
     </body>
