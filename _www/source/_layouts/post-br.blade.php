@@ -1,4 +1,4 @@
-@extends('_layouts.master')
+@extends('_layouts.master-br')
 
 @php
     $page->type = 'article';
@@ -16,7 +16,7 @@
     @if ($page->categories)
         @foreach ($page->categories as $i => $category)
             <a
-                href="{{ '/categories/' . $category }}"
+                href="{{ '/blog/categories/' . $category }}"
                 title="View posts in {{ $category }}"
                 class="inline-block px-3 pt-px mr-4 text-xs font-semibold leading-loose tracking-wide text-gray-800 uppercase bg-gray-300 rounded hover:bg-blue-200"
             >{{ $category }}</a>

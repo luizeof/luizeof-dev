@@ -11,11 +11,16 @@
         <meta property="og:title" content="{{ $page->title ? $page->title . ' | ' : '' }}{{ $page->siteName }}"/>
         <meta property="og:type" content="{{ $page->type ?? 'website' }}" />
         <meta property="og:url" content="{{ $page->getUrl() }}"/>
+        @if ($page->cover_image)
+            <meta property="og:image" content="{{ $page->baseUrl . $page->cover_image }}"/>
+        @endif
         <meta property="og:description" content="{{ $page->description ?? $page->siteDescription }}" />
 
         <title>{{ $page->title ?  $page->title . ' | ' : '' }}{{ $page->siteName }}</title>
 
-        <link rel="home" href="{{ $page->baseUrl }}">
+        <link rel="preload" rel="home" href="{{ $page->baseUrl }}">
+
+        <link rel="canonical" href="{{ $page->getUrl() }}" />
 
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -56,9 +61,9 @@
             <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "25de681d7f73400fbbc8c4f18b08c66e"}'></script><!-- End Cloudflare Web Analytics -->
         @endif
 
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <link rel="preload" rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
-        <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
+        <link rel="preload" rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
     </head>
 
     <body class="flex flex-col justify-between min-h-screen font-sans leading-normal text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-gray-400">
@@ -92,7 +97,7 @@
             </ul>
         </footer>
 
-        <script src="{{ mix('js/main.js', 'assets/build') }}"></script>
+        <script rel="preload" src="{{ mix('js/main.js', 'assets/build') }}"></script>
 
         @stack('scripts')
     </body>

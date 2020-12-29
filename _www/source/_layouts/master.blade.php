@@ -11,11 +11,16 @@
         <meta property="og:title" content="{{ $page->title ? $page->title . ' | ' : '' }}{{ $page->siteName }}"/>
         <meta property="og:type" content="{{ $page->type ?? 'website' }}" />
         <meta property="og:url" content="{{ $page->getUrl() }}"/>
+        @if ($page->cover_image)
+            <meta property="og:image" content="{{ $page->baseUrl . $page->cover_image }}"/>
+        @endif
         <meta property="og:description" content="{{ $page->description ?? $page->siteDescription }}" />
 
         <title>{{ $page->title ?  $page->title . ' | ' : '' }}{{ $page->siteName }}</title>
 
         <link rel="home" href="{{ $page->baseUrl }}">
+
+        <link rel="canonical" href="{{ $page->getUrl() }}" />
 
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">

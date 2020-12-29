@@ -14,10 +14,10 @@ return [
         'posts' => [
             'author' => 'luizeof', // Default author, if not provided in a post
             'sort' => '-date',
-            'path' => '/{filename}',
+            'path' => '/blog/{filename}',
         ],
         'categories' => [
-            'path' => '/categories/{filename}',
+            'path' => '/blog/categories/{filename}',
             'posts' => function ($page, $allPosts) {
                 return $allPosts->filter(function ($post) use ($page) {
                     return $post->categories ? in_array($page->getFilename(), $post->categories, true) : false;

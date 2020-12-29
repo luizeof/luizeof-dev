@@ -2,6 +2,8 @@
 
 rm -rf build_production
 
+rm -rf dist
+
 echo "Building Blog ..."
 
 cd _www
@@ -12,8 +14,12 @@ npm run production
 
 vendor/bin/jigsaw build production
 
-find source/assets/img/ -name "*.jpg" -exec jpegoptim -m80 -o -p --strip-all {} \;
-
 cd ..
 
 mv _www/build_production build_production
+
+minify -s -r -o dist/ build_production
+
+rm -rf dist/build
+
+cp -rf build_production/assets dist/

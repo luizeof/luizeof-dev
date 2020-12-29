@@ -8,3 +8,4 @@
 .firebase-debug.log
 firebase-debug.log
 .firebase/*.cache
+/dist/
