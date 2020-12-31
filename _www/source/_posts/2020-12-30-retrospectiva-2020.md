@@ -76,11 +76,18 @@ A idéia é que agora em 2021 eu escreva sobre Laravel e Tailwind aqui no Blog ;
 
 Outro ponto que tive muito tempo para fazer foi ajustar a imagem do Docker da Powertic. No começo do ano começamos usar Swarm em servidores dedicados para os Mautics e foi necessário otimizar (e muito) o nosso Docker privado. Ficou 10 e já tenho até a versão para o Mautic 3.
 
+## Participei do MauticCon 2020
+
+Desde o ano passado que o MauticCon estava no radar e neste ano ele saiu do papel. Consegui uma apresentação sobre Mautic para Grandes Bases de Contatos e foi muito legal.s
+
+## Elementor Meetup São Paulo
+
+A turma do Elementor também me concedeu acesso ao Elementor Meetup São Paulo, que é um encontro Bimestral com a comunidade Elementor aqui no Brasil. Fiquei muito feliz em participar dessa empreitada.
+
 
 ## Atualizei meu Stack
 
 Aproveitei também para conhecer novas ferramentas e aprimorar ferramentas que conhecia "por cima". 
-
 
 #### Docker Swarm
 
@@ -125,6 +132,14 @@ Apesar do Painel da Powertic ter sido feito em Bootstrap 5, as facilidades do Ta
 Pensei em aprender Vue umas 3 vezes nesse ano, mas depois que conheci o Livewire e consegui colocar ele no meu Workflow, posso dizer que nem penso mais em Vue ou qualquer outro "javascript".
 
 Livewire dá uma nova roupagem na interação com a web e realmente é um dos projetos que mais me chama a atenção no mundo Laravel.
+
+
+## Comecei usar JAMStack com Jigsaw
+
+
+Comecei este blog usando JamStack com [Jigsaw](https://jigsaw.tighten.co/), que é um framework baseado no Blade no Laravel, com suporte ao WebPack, Tailwind, PostCSS e mais.
+
+Gostei muito de escrever em Markdown e hospedo este blog gratuitamente no Google Firebase Host. Além de ter controle total sobre o código, consigo uma nota Excelente no GTMetrix e no PageSpeed Insights.
 
 
 ## Comecei um novo Painel para a Powertic
