@@ -1,3 +1,4 @@
 #!/bin/bash
 
-./vendor/bin/jigsaw serve
+npm run watch
+
