@@ -23,9 +23,9 @@
         @endforeach
     @endif
 
-    <div class="pb-4 mb-10 border-b border-blue-200" v-pre>
+    <article class="pb-4 mb-10 border-b border-blue-200">
         @yield('content')
-    </div>
+    </article>
 
     <nav class="flex justify-between text-sm md:text-base">
         <div>

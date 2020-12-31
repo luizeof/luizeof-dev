@@ -66,7 +66,7 @@ h6 {
 }
 
 h1 {
-    @apply font-extrabold;
+    @apply font-black;
     @apply text-5xl;
 }
 
@@ -81,12 +81,12 @@ h3 {
 }
 
 h4 {
-    @apply font-normal;
+    @apply font-bold;
     @apply text-2xl;
 }
 
 h5 {
-    @apply font-normal;
+    @apply font-bold;
     @apply text-xl;
 }
 

@@ -1,1 +1,19 @@
 // Your custom blog styles here
+
+article p img {
+  @apply mx-auto;
+  @apply object-scale-down;
+  @apply p-12;
+}
+
+article h2,
+article h3 {
+  @apply pt-3;
+  @apply pb-6;
+}
+
+article ul,
+article ol {
+  @apply list-inside;
+  @apply ml-4;
+}

@@ -7,23 +7,29 @@ date: 2020-12-30
 categories: [ pessoal ]
 ---
 
-Que ano difícil, arrastado e ainda assim incrível.
+2020 foi um ano difícil, arrastado e ainda assim incrível.
 
-Apensar de todo o transtorno da pandemia, foi o ano mais produtivo que me lembro. Aproveitei para colocar as coisas em dia na vida financeira, pessoal e profissional.
+Apensar de todo o transtorno causado pela Pandemia, foi o ano mais produtivo que me lembro.
+
+Aproveitei para colocar as coisas em dia na vida financeira, pessoal e profissional.
 
 Vou falar aqui neste artigo sobre o lado profissional. Bora lá ?
 
-
 ## Coloquei o Todoist em dia
 
+O [Todoist](https://todoist.com/r/luiz_eduardo_cvqdip) não me deixava em paz. Todo dia eu recebia aquele e-mail falando que tenho "XX tarefas pendentes".
 
-O Todoist não me deixava em paz. Todo dia eu recebia aquele e-mail falando que tenho "XX tarefas pendentes". Isso me deixava frustrado, mas também me fazia não perder o foco do que tinha que ser feito em algum momento.
+Isso me deixava frustrado, mas também me fazia não perder o foco do que tinha que ser feito em algum momento.
 
 Agora na pandemia tive tempo de ler novamente o "Getting Things Done" e isso mudou muito como encaro a gestão de tarefas do dia a dia.
 
-Só o fato de colocar na lista de tarefas todas as coisas que eu queria fazer foi o maior impulso para realmente realizar essas tarefas. Tudo que está aqui neste artigo foi lançado no Todoist e me serviu de guia durante a pandemia.
+O fato de colocar na lista de tarefas todas as coisas que eu queria fazer foi o maior impulso para realmente realizar essas tarefas.
 
-Se você está procrastinando, tem noção disso e quer mudar esse comportamento, recomendo o livro "Getting Things Done" e o app Todoist.
+Tudo que está aqui neste artigo foi lançado no Todoist e me serviu de guia durante a pandemia.
+
+Se você está **procrastinando**, tem noção disso e quer mudar esse comportamento, recomendo o livro **[Getting Things Done](https://www.amazon.com.br/arte-fazer-acontecer-Estrat%C3%A9gias-produtividade-ebook/dp/B015YGOACS/)** e o app [Todoist](https://todoist.com/r/luiz_eduardo_cvqdip).
+
+![Coloquei o Todoist em dia](/assets/img/2020/dez/todoist-dez-2020.png)
 
 ## Aprendi editar Podcasts com o ReaperFM
 
@@ -47,17 +53,13 @@ Tenho 2 publishers no pub.dev, o site oficial de pacotes e bibliotecas para Dart
 
 No meu publisher pessoal [pub.dev/publishers/luizeof.dev](https://pub.dev/publishers/luizeof.dev/packages):
 
-
 - [picpay](https://pub.dev/packages/picpay)
-
 - [podcast_feed_eof](https://pub.dev/packages/eof_podcast_feed)
 
 E no publisher da Powertic [pub.dev/publishers/powertic.com](https://pub.dev/publishers/powertic.com/packages):
 
 - [mautic_api](https://pub.dev/packages/mautic_api)
-
 - [mautic_tracking_api](https://pub.dev/packages/mautic_tracking_api)
-
 
 ## Enfim, mergulhei no Laravel
 
