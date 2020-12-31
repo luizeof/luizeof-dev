@@ -7,9 +7,7 @@ date: 2020-12-30
 categories: [ pessoal ]
 ---
 
-2020 foi um ano difícil, arrastado e ainda assim incrível.
-
-Apensar de todo o transtorno causado pela Pandemia, foi o ano mais produtivo que me lembro.
+2020 foi um ano difícil, arrastado e ainda assim incrível. Apensar de todo o transtorno causado pela Pandemia, foi o ano mais produtivo que me lembro.
 
 Aproveitei para colocar as coisas em dia na vida financeira, pessoal e profissional.
 
@@ -21,11 +19,11 @@ O [Todoist](https://todoist.com/r/luiz_eduardo_cvqdip) não me deixava em paz. T
 
 Isso me deixava frustrado, mas também me fazia não perder o foco do que tinha que ser feito em algum momento.
 
-Agora na pandemia tive tempo de ler novamente o "Getting Things Done" e isso mudou muito como encaro a gestão de tarefas do dia a dia.
+Agora na pandemia tive tempo de ler novamente o **[Getting Things Done](https://www.amazon.com.br/arte-fazer-acontecer-Estrat%C3%A9gias-produtividade-ebook/dp/B015YGOACS/)** e isso mudou muito como encaro a gestão de tarefas do dia a dia.
 
 O fato de colocar na lista de tarefas todas as coisas que eu queria fazer foi o maior impulso para realmente realizar essas tarefas.
 
-Tudo que está aqui neste artigo foi lançado no Todoist e me serviu de guia durante a pandemia.
+Tudo que está aqui neste artigo foi lançado no Todoist e me serviu de guia durante este ano.
 
 Se você está **procrastinando**, tem noção disso e quer mudar esse comportamento, recomendo o livro **[Getting Things Done](https://www.amazon.com.br/arte-fazer-acontecer-Estrat%C3%A9gias-produtividade-ebook/dp/B015YGOACS/)** e o app [Todoist](https://todoist.com/r/luiz_eduardo_cvqdip).
 
@@ -33,7 +31,7 @@ Se você está **procrastinando**, tem noção disso e quer mudar esse comportam
 
 ## Aprendi editar Podcasts com o ReaperFM
 
-Antes mesmo da Pandemia comecei a editar áudio com um foco mais "profissional". Sempre gostei de podcasts, montei minhas pautas com cuidado mas nunca fui muito feliz com o resultado final do áudio.
+Antes mesmo da Pandemia comecei a editar áudio com um foco mais "profissional". Sempre gostei de podcasts, sempre montei minhas pautas com cuidado mas nunca fui muito feliz com o resultado final do áudio.
 
 Foi aí que conheci o [Reaper FM](https://www.reaper.fm/). Um software fantástico para edição que me possibilitou avançar muito na edição de masterização de podcasts.
 
@@ -43,9 +41,11 @@ Fiz até alguns vídeos sobre edição de audio no meu canal paralelo no Youtube
 
 ## Conheci o Flutter
 
-No final de Dezembro de 2019, nos últimos dias do ano conheci o Flutter e em janeiro dediquei muitas horas para entender como ele funciona. Fiz alguns projetos simples e até mesmo um App para Podcast.
+No final de Dezembro de 2019, nos últimos dias do ano conheci o Flutter e em Janeiro dediquei muitas horas para entender como ele funciona. Fiz alguns projetos simples e até mesmo um App para Podcast.
 
-Acredito que em 2021 devo lançar o app da Powertic e do EmailFirst em Flutter.
+Acredito que em 2021 devo lançar o app da Powertic e do EmailFirst em Flutter.\
+
+Nessa fase de aprendizado, escrevi algumas bibliotecas para ver como funciona e aprender mais sobre o Dart, uma linguagem fascinante.
 
 ### Packages no pub.dev
 
@@ -61,31 +61,39 @@ E no publisher da Powertic [pub.dev/publishers/powertic.com](https://pub.dev/pub
 - [mautic_api](https://pub.dev/packages/mautic_api)
 - [mautic_tracking_api](https://pub.dev/packages/mautic_tracking_api)
 
-## Enfim, mergulhei no Laravel
+## Mergulhei no Laravel
 
-Antes tarde do que nunca. Sempre gostei de usar Ruby on Rails e tenho uma resistência grande ao PHP, ainda tenho na verdade, mas consigo superar com facilidade.
+Antes tarde do que nunca. Sempre gostei de usar Ruby on Rails e tenho uma resistência grande ao PHP, ainda tenho na verdade e hoje consigo superar com mais facilidade.
 
 O Laravel veio em boa hora, lá pra Agosto quando eu tive a necessidade de reescrever o painel da Powertic do Ruby on Rails para PHP.
 
-Assisti tudo do LaraCasts além de intermináveis vídeos no Youtube e consegui subir a versão beta do Painel da Powertic e o beta do EmailFirst. Tenho muito trabalho em Laravel agora em Janeiro e Fevereiro.
+Assisti tudo do LaraCasts além de intermináveis vídeos no Youtube e consegui subir a versão beta do Painel da Powertic e o beta do EmailFirst. 
+
+Tenho muito trabalho em Laravel agora em Janeiro e Fevereiro e estou gostando muito de aprender esse framework fanstástico.
 
 É realmente incrível como o Laravel pode acelerar o desenvolvimento Web tanto no Backend, quanto no FrontEnd.
 
-A idéia é que agora em 2021 eu escreva sobre Laravel e Tailwind aqui no Blog ;)
-
+A idéia é que agora em 2021 eu escreva sobre Larave aqui no Blog ;)
 
 ## Mudanças no Docker Mautic da Powertic
 
-Outro ponto que tive muito tempo para fazer foi ajustar a imagem do Docker da Powertic. No começo do ano começamos usar Swarm em servidores dedicados para os Mautics e foi necessário otimizar (e muito) o nosso Docker privado. Ficou 10 e já tenho até a versão para o Mautic 3.
+Outro ponto que tive muito tempo para fazer foi ajustar a imagem do Docker da Powertic.
+
+No começo do ano começamos usar o Swarm em servidores dedicados para os Mautics e foi necessário otimizar (e muito) a nossa imagem Docker privada. Ficou 10 e já tenho até a versão para o Mautic 3.
+
+Recomendo que de tempos em tempos você reescreva suas imagens Docker e aplique as técnicas que aprendeu. O resultado é muito bom.
 
 ## Participei do MauticCon 2020
 
-Desde o ano passado que o MauticCon estava no radar e neste ano ele saiu do papel. Consegui uma apresentação sobre Mautic para Grandes Bases de Contatos e foi muito legal.s
+Desde o ano passado que o MauticCon estava no radar e neste ano ele saiu do papel.
+
+Consegui uma apresentação sobre Mautic para Grandes Bases de Contatos e foi muito legal.
 
 ## Elementor Meetup São Paulo
 
-A turma do Elementor também me concedeu acesso ao Elementor Meetup São Paulo, que é um encontro Bimestral com a comunidade Elementor aqui no Brasil. Fiquei muito feliz em participar dessa empreitada.
+A turma do Elementor também me tornou organizador do Elementor Meetup São Paulo, que é um encontro Bimestral com a comunidade Elementor aqui no Brasil.
 
+Fiquei muito feliz em participar desses encontros. Aproveite e cadastre-se em [https://www.meetup.com/pt-BR/Elementor-Sao-Paulo/](https://www.meetup.com/pt-BR/Elementor-Sao-Paulo/).
 
 ## Atualizei meu Stack
 
@@ -138,20 +146,22 @@ Livewire dá uma nova roupagem na interação com a web e realmente é um dos pr
 
 ## Comecei usar JAMStack com Jigsaw
 
-
 Comecei este blog usando JamStack com [Jigsaw](https://jigsaw.tighten.co/), que é um framework baseado no Blade no Laravel, com suporte ao WebPack, Tailwind, PostCSS e mais.
 
-Gostei muito de escrever em Markdown e hospedo este blog gratuitamente no Google Firebase Host. Além de ter controle total sobre o código, consigo uma nota Excelente no GTMetrix e no PageSpeed Insights.
+Gostei muito de escrever em Markdown e hospedo este blog gratuitamente no Google Firebase Host.
+
+Além de ter controle total sobre o código, consigo uma nota Excelente no GTMetrix e no PageSpeed Insights.
 
 
 ## Comecei um novo Painel para a Powertic
 
-E no segundo semstre de 2020 comecei firme a migração do painel da Powertic do Ruby on Rails para o PHP em Laravel. Acredito que em janeiro já possa liberar para uso dos clientes.
+No segundo semstre de 2020 comecei firme a migração do painel da Powertic do Ruby on Rails para o PHP em Laravel. 
 
+É um painel completo para gestão do Mautic tanto do nosso lado de suporte quanto para o Cliente. Acredito que em janeiro já possa liberar para uso dos clientes. 
 
 ## Começamos um novo sistema para E-mail 
 
-E nesse pocesso de desenvolvimento começamos também um novo sistema chamado EmailFirst, que vai ajudar muito quem trabalha com e-mail marketing e quer uma ferramenta que monitore e cuide dos pequenos detalhes.
+E nesse pocesso de desenvolvimento o Rodrigo Demetrio e eu tiramos do papel um novo sistema chamado EmailFirst, que vai ajudar muito quem trabalha com e-mail marketing e quer uma ferramenta que monitore e cuide dos pequenos detalhes.
 
 ## Finalizando
 
