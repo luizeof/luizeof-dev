@@ -1,7 +1,7 @@
 ---
 extends: _layouts.post-br
 section: content
-title: "Retrospectiva do ano de 2020"
+title: "Retrospectiva 2020"
 excerpt: Uma visão geral de como foi o conturbado ano de 2020.
 date: 2020-12-30
 categories: [ pessoal ]

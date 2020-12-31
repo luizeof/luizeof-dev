@@ -7,8 +7,10 @@
         <meta name="description" content="{{ $page->description ?? $page->siteDescription }}">
         <meta name="robots" content="index, follow">
         <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <meta property="fb:app_id" content="203262620105524" /> 
 
+        @stack('schemaorg')
+
+        <meta property="fb:app_id" content="203262620105524" /> 
         <meta property="og:title" content="{{ $page->title ? $page->title . ' | ' : '' }}{{ $page->siteName }}"/>
         <meta property="og:type" content="{{ $page->type ?? 'website' }}" />
         <meta property="og:url" content="{{ $page->getUrl() }}/"/>

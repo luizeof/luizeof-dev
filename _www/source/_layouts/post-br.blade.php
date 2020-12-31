@@ -1,8 +1,68 @@
 @extends('_layouts.master-br')
 
 @php
-    $page->type = 'article';
+$page->type = 'article';
+$category = "article";
+$cover = "/assets/img/og-image.png";
+if ($page->cover_image){
+    $cover = $page->cover_image;
+}
 @endphp
+
+@if ($page->categories)
+    @foreach ($page->categories as $i => $cat)
+        @php $category = $cat @endphp
+    @endforeach
+@endif
+
+@push('schemaorg')
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "NewsArticle",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://luizeof.dev{{ $page->getUrl() }}"
+            },
+            "headline": "{{ $page->title }}",
+            "image": [
+                "https://luizeof.dev{{ $cover }}"
+            ],
+            "datePublished": "{{ $page->date }}",
+            "dateModified": "{{ $page->date }}",
+            "author": {
+                "@type": "Person",
+                "name": "luizeof"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "luizeof.dev",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://luizeof.dev/android-icon-192x192.png"
+                }
+            }
+        }
+
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "blog",
+                "item": "https://luizeof.dev/posts/"
+            }, {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "{{ $category }}"
+            }]
+        }
+
+    </script>
+@endpush
 
 @section('body')
     @if ($page->cover_image)
