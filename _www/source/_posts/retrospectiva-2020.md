@@ -43,7 +43,7 @@ Fiz até alguns vídeos sobre edição de audio no meu canal paralelo no Youtube
 
 No final de Dezembro de 2019, nos últimos dias do ano conheci o Flutter e em Janeiro dediquei muitas horas para entender como ele funciona. Fiz alguns projetos simples e até mesmo um App para Podcast.
 
-Acredito que em 2021 devo lançar o app da Powertic e do EmailFirst em Flutter.\
+Acredito que em 2021 devo lançar o app da Powertic e do EmailFirst em Flutter.
 
 Nessa fase de aprendizado, escrevi algumas bibliotecas para ver como funciona e aprender mais sobre o Dart, uma linguagem fascinante.
 
@@ -73,7 +73,7 @@ Tenho muito trabalho em Laravel agora em Janeiro e Fevereiro e estou gostando mu
 
 É realmente incrível como o Laravel pode acelerar o desenvolvimento Web tanto no Backend, quanto no FrontEnd.
 
-A idéia é que agora em 2021 eu escreva sobre Larave aqui no Blog ;)
+A idéia é que agora em 2021 eu escreva sobre Laravel aqui no Blog ;)
 
 ## Mudanças no Docker Mautic da Powertic
 
@@ -83,9 +83,9 @@ No começo do ano começamos usar o Swarm em servidores dedicados para os Mautic
 
 Recomendo que de tempos em tempos você reescreva suas imagens Docker e aplique as técnicas que aprendeu. O resultado é muito bom.
 
-## Participei do MauticCon 2020
+## Participei do MautiCon 2020
 
-Desde o ano passado que o MauticCon estava no radar e neste ano ele saiu do papel.
+Desde o ano passado que o MautiCon estava no radar e neste ano ele saiu do papel.
 
 Consegui uma apresentação sobre Mautic para Grandes Bases de Contatos e foi muito legal.
 
@@ -123,7 +123,7 @@ Vou escrever algumas dicas de extensões aqui no blog também.
 
 #### VSCode na Nuvem
 
-O ponto que mais gostei do VSCode é que rodo todo o meu ambiente de Dev e Staging na nuvem. Tenho o PHP instalado no meu notebook mas apenas para compliar o JamStack do JigSaw que eu uso aqui no Blog.
+O ponto que mais gostei do VSCode é que rodo todo o meu ambiente de Dev e Staging na nuvem. Tenho o PHP instalado no meu notebook mas apenas para compilar o JamStack do JigSaw que eu uso aqui no Blog.
 
 Todo o meu ambiente de dev roda na nuvem. É uma maravilha ter essa liberdade.
 
