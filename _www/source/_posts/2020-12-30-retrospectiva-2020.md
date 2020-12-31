@@ -153,6 +153,6 @@ E nesse pocesso de desenvolvimento começamos também um novo sistema chamado Em
 
 ## Finalizando
 
-Foi uma ano corrido. Essas são somente as conquistas profissionais, mas ainda tenho muitas outras coisas boas que tirei da pandemia neste ano e que fizeram com que o ano valesse a pena.
+Foi um ano corrido. Essas são somente as conquistas profissionais, mas ainda tenho muitas outras coisas boas que tirei da pandemia neste ano e que fizeram com que o ano valesse a pena.
 
 Um abraço e Feliz 2021!
