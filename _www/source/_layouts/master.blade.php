@@ -24,6 +24,7 @@
         <title>{{ $page->title ?  $page->title . ' | ' : '' }}{{ $page->siteName }}</title>
 
         <link rel="home" href="{{ $page->baseUrl }}">
+        
         <link rel="canonical" href="{{ $page->getUrl() }}/" />
 
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -63,6 +64,12 @@
             firebase.analytics();
             </script>
             <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "25de681d7f73400fbbc8c4f18b08c66e"}'></script><!-- End Cloudflare Web Analytics -->
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-NXCHRB2');</script>
+            <!-- End Google Tag Manager -->
         @endif
 
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
@@ -71,6 +78,12 @@
     </head>
 
     <body class="flex flex-col justify-between min-h-screen font-sans leading-normal text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-gray-400">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXCHRB2"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
         <header class="flex items-center h-24 py-4 bg-white border-b shadow dark:bg-gray-900 dark:border-gray-700" role="banner">
             <div class="container flex items-center max-w-4xl px-6 mx-auto ">
                 <div class="flex items-center">
