@@ -2,7 +2,7 @@
 extends: _layouts.post-br
 section: content
 title: "Como acessar API com Basic Authentication no Flutter"
-description: No desenvolvimento com Flutter é fundamental acessar API que possuem algum tipo de autenticação e o método mais popular é o Basic Authentication.
+excerpt: No desenvolvimento com Flutter é fundamental acessar API que possuem algum tipo de autenticação e o método mais popular é o Basic Authentication.
 cover_image: "/assets/img/category/flutter-full.webp"
 date: 2020-01-02
 categories: [ flutter, flutter-br ]

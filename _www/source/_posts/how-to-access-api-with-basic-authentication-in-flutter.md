@@ -4,8 +4,7 @@ section: content
 title: "How to access API with Basic Authentication in Flutter"
 date: 2020-01-02
 lang: "en"
-featured: true
-description: Implementing dynamic Dark Mode on Flutter using `ThemeMode` and the plugin `provider`.
+excerpt: Implementing dynamic Dark Mode on Flutter using `ThemeMode` and the plugin `provider`.
 cover_image: "/assets/img/category/flutter-full.webp"
 categories: [flutter]
 ---

@@ -3,7 +3,7 @@ extends: _layouts.post
 section: content
 title: "Dark Mode on Flutter with ThemeMode and Provider"
 date: 2020-01-15
-description: Implementing dynamic Dark Mode on Flutter using `ThemeMode` and the plugin `provider`.
+excerpt: Implementing dynamic Dark Mode on Flutter using `ThemeMode` and the plugin `provider`.
 cover_image: "/assets/img/category/flutter-full.webp"
 categories: [flutter]
 ---

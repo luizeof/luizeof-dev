@@ -69,7 +69,7 @@ if ($page->cover_image){
         <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image" class="mb-2">
     @endif
 
-    <h1 class="mb-2 leading-none text-gray-900 dark:text-gray-400">{{ $page->title }}</h1>
+    <h1 class="mb-2 font-black leading-none text-gray-900 dark:text-gray-400">{{ $page->title }}</h1>
 
     <p class="text-xl text-gray-700 dark:text-blue-200 md:mt-0">{{ $page->author }}  •  {{ date('F j, Y', $page->date) }}</p>
 
@@ -83,7 +83,7 @@ if ($page->cover_image){
         @endforeach
     @endif
 
-    <article class="pb-4 mb-10 border-b border-blue-200" v-pre>
+    <article class="pb-4 my-10 border-b border-blue-200" v-pre>
         @yield('content')
     </article>
 
