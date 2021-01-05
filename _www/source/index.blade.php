@@ -4,7 +4,7 @@
     @foreach ($posts->where('featured', true) as $featuredPost)
         <div class="w-full mb-6">
             @if ($featuredPost->cover_image)
-            <a href="{{ $featuredPost->getUrl() }}" title="Read {{ $featuredPost->title }}">
+            <a href="{{ $featuredPost->getUrl() }}/" title="Read {{ $featuredPost->title }}">
                 <img src="{{ $featuredPost->cover_image }}" alt="{{ $featuredPost->title }} cover image" class="mb-6">
             </a>
             @endif
@@ -14,14 +14,14 @@
             </p>
 
             <h2 class="mt-0 text-3xl">
-                <a href="{{ $featuredPost->getUrl() }}" title="Read {{ $featuredPost->title }}" class="font-extrabold text-gray-900 underline dark:underline dark:text-blue-400">
+                <a href="{{ $featuredPost->getUrl() }}/" title="Read {{ $featuredPost->title }}" class="font-extrabold text-gray-900 underline dark:underline dark:text-blue-400">
                     {{ $featuredPost->title }}
                 </a>
             </h2>
 
             <p class="mt-0 mb-4">{!! $featuredPost->getExcerpt() !!}</p>
 
-            <a href="{{ $featuredPost->getUrl() }}" title="Read - {{ $featuredPost->title }}" class="mb-4 tracking-wide uppercase">
+            <a href="{{ $featuredPost->getUrl() }}/" title="Read - {{ $featuredPost->title }}" class="mb-4 tracking-wide uppercase">
                 Read
             </a>
         </div>

@@ -23,7 +23,7 @@
 
         <title>{{ $page->title ?  $page->title . ' | ' : '' }}{{ $page->siteName }}</title>
 
-        <link rel="home" href="{{ $page->baseUrl }}">
+        <link rel="home" href="{{ $page->baseUrl }}/">
         
         <link rel="canonical" href="{{ $page->getUrl() }}/" />
 
@@ -109,7 +109,7 @@
         <footer class="py-4 mt-12 text-sm text-center bg-white dark:bg-gray-900" role="contentinfo">
             <ul class="flex flex-col justify-center list-none md:flex-row">
                 <li class="md:mr-2">
-                    &copy; <a href="https://luizeof.dev" title="Luiz Eduardo">luizeof.dev</a> {{ date('Y') }}.
+                    &copy; <a href="https://luizeof.dev/" title="Luiz Eduardo">luizeof.dev</a> {{ date('Y') }}.
                 </li>
             </ul>
         </footer>
